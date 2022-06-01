@@ -23,6 +23,8 @@ namespace Jardam.Data
             base.OnModelCreating(builder);
         }
 
+        public DbSet<Jardam.Models.HelpData> HelpData { get; set; }
+
         //public DbSet<Content> Content { get; set; }
     }
 }

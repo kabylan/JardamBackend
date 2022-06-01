@@ -49,7 +49,7 @@ namespace Jardam
 
             services.AddControllersWithViews();
             services.AddTransient<IEmailService, EmailService>();
-
+            services.AddCors(); // Make sure you call this previous to AddMvc
 
             services.AddRazorPages()
                 .AddXLocalizer<LocSource>(ops =>
@@ -100,7 +100,10 @@ namespace Jardam
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
             app.UseRouting();
 
             app.UseAuthentication();
