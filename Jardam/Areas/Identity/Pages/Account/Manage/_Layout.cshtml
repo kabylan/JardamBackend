@@ -1,0 +1,30 @@
+﻿@{
+    if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
+    {
+        Layout = (string)parentLayout;
+    }
+
+}
+
+@await Html.PartialAsync("_BackToHomePartial", "/")
+
+<div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Ваш профиль</h2>
+        </div>
+        <div class="col-12 mt-4">
+            <partial name="_ManageNav" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 mt-3" style="min-height: 500px;">
+            @RenderBody()
+        </div>
+    </div>
+
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

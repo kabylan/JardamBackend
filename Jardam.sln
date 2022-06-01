@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jardam", "Jardam\Jardam.csproj", "{A9D0A576-F154-4C55-99FD-A44F52E49F6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9D0A576-F154-4C55-99FD-A44F52E49F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9D0A576-F154-4C55-99FD-A44F52E49F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9D0A576-F154-4C55-99FD-A44F52E49F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9D0A576-F154-4C55-99FD-A44F52E49F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF316EE0-50B8-4E2F-9DC6-004163DD984E}
+	EndGlobalSection
+EndGlobal
