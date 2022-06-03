@@ -39,6 +39,8 @@ namespace Jardam.Controllers
             public string UserLastName { get; set; }
 
             public string UserID { get; set; }
+
+            public int HelpDataID { get; set; }
         }
 
         // GET: HelpDatas
@@ -58,7 +60,8 @@ namespace Jardam.Controllers
                     UserLastName = "",
                     Lat = m.Lat,
                     Long = m.Long,
-                    CreateDateTime = m.CreateDateTime
+                    CreateDateTime = m.CreateDateTime,
+                    HelpDataID = m.Id
                 };
 
                 var user = new ApplicationUser();
