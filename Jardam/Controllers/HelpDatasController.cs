@@ -37,6 +37,8 @@ namespace Jardam.Controllers
             public string UserFirstName { get; set; }
 
             public string UserLastName { get; set; }
+
+            public string UserID { get; set; }
         }
 
         // GET: HelpDatas
@@ -69,12 +71,13 @@ namespace Jardam.Controllers
                 {
                     helpDataViewModel.UserFirstName = user.firstName;
                     helpDataViewModel.UserLastName = user.lastName;
+                    helpDataViewModel.UserID = user.Id;
                 }
                 
                 helpDataViewModels.Add(helpDataViewModel);
             });
 
-            return Json(helpDataViewModels);
+            return Json(helpDataViewModels.OrderBy(m => m.CreateDateTime));
         }
 
         // GET: HelpDatas/Details/5
@@ -126,6 +129,7 @@ namespace Jardam.Controllers
                 }
 
                 helpData.CreateDateTime = DateTime.Now;
+                //helpData.CreateDateTime = DateTime.Parse("2022-06-02 22:00");
 
                 _context.Add(helpData);
                 await _context.SaveChangesAsync();
