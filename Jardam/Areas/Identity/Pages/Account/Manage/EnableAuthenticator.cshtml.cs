@@ -148,7 +148,7 @@ namespace Jardam.Areas.Identity.Pages.Account.Manage
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("Dorf"),
+                _urlEncoder.Encode("Jardam"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

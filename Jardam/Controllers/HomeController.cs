@@ -6,20 +6,33 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Jardam.Data;
+using Microsoft.AspNetCore.Identity;
+using Newtonsoft.Json;
 
 namespace Jardam.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(UserManager<ApplicationUser> userManager)
         {
-            _logger = logger;
+            _userManager = userManager;
         }
 
-        public IActionResult Index()
+
+
+        public async Task<IActionResult> Index()
         {
+
+            var user = await _userManager.GetUserAsync(User);
+
+            ViewBag.UserData = user;
+
             return View();
         }
 
