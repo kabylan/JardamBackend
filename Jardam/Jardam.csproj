@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -15,9 +15,11 @@
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.1" />
 		<PackageReference Include="XLocalizer" Version="1.0.3" />
 		<PackageReference Include="XLocalizer.Translate" Version="1.0.0" />
 		<PackageReference Include="XLocalizer.Translate.MyMemoryTranslate" Version="1.0.1" />
+
 	</ItemGroup>
 
 	<ProjectExtensions><VisualStudio><UserProperties appsettings_1development_1json__JsonSchema="https://docs.gradle.com/build-cache-node/schema/build-cache-node-config-schema-5.json" /></VisualStudio></ProjectExtensions>

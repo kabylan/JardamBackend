@@ -32,6 +32,7 @@ namespace Jardam.Services
 
             // send email
             using var smtp = new SmtpClient();
+            
             smtp.Connect(Configuration["SmtpHost"], int.Parse(Configuration["SmtpPort"]), SecureSocketOptions.Auto);
             smtp.Authenticate(Configuration["SmtpUser"], Configuration["SmtpPass"]);
             smtp.Send(email);

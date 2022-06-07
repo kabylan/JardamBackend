@@ -18,11 +18,11 @@
                         <div class="btn-container mb-3 d-flex justify-content-center">
                             <a href="#mapDiv" onclick="getHelp()" class="btn btn-main-2 btn-icon btn-round-full">Помогите!</a>
                         </div>
-                        <p class="mb-4 pr-5">
+                        <p class="mb-4">
                             Ваше местоположение будет отображаться на карте. Все активные пользователи сайта будут видеть, что вы - в опасности.
                             Те кто рядом, возможно придут вам на помощь.
                         </p>
-                        <p class="mb-1 pr-5 text-danger">
+                        <p class="mb-1 pr-3 text-danger">
                             За ложный вызов мы вас заблокируем навсегда!
                         </p>
                     </div>
@@ -32,6 +32,11 @@
     </section>
 
 
+    <div class="row p-2">
+        
+    </div>
+
+
     <section class="features">
         <div class="container">
 
@@ -39,37 +44,37 @@
                 <div id="map" style="width: 400px;height:400px"></div>
             </div>
 
+            <div class="d-flex justify-content-around p-2">
+                <div>
+                    <label for="timeToShowRange" class="form-label">
+                        Показать за: <span id="timeToShowTxt">12</span> часов
+                    </label><br>
+                    <input type="range" class="form-range" value="12" min="1" max="24" id="timeToShowRange">
+                </div>
+
+                <div >Количество меток: <span id="placemarkCount">1</span></div>
+            </div>
+
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="feature-block d-lg-flex">
-                        <div class="feature-item mb-5 mb-lg-0">
+                        @*<div class="feature-item mb-5 mb-lg-0">
 
-                            <div class="row p-2">
-                                <div>Количество меток: <span id="placemarkCount"></span></div>
-                            </div>
-                            <div class="row p-2">
-                                <div>
-                                    <label for="timeToShowRange" class="form-label">
-                                        Показать за: <span id="timeToShowTxt">12</span> часов
-                                    </label><br>
-                                    <input type="range" class="form-range" value="12" min="1" max="24" id="timeToShowRange">
-                                </div>
-                            </div>
-
-                        </div>
+                        </div>*@
                         <!--
-                                            <div class="feature-item mb-5 mb-lg-0">
-                                                <div class="feature-icon mb-4">
-                                                    <i class="icofont-ui-clock"></i>
-                                                </div>
-                                                <span>Timing schedule</span>
-                                                <h4 class="mb-3">Working Hours</h4>
-                                                <ul class="w-hours list-unstyled">
-                                                    <li class="d-flex justify-content-between">Sun - Wed : <span>8:00 - 17:00</span></li>
-                                                    <li class="d-flex justify-content-between">Thu - Fri : <span>9:00 - 17:00</span></li>
-                                                    <li class="d-flex justify-content-between">Sat - sun : <span>10:00 - 17:00</span></li>
-                                                </ul>
-                                            </div> -->
+                                    <div class="feature-item mb-5 mb-lg-0">
+                                        <div class="feature-icon mb-4">
+                                            <i class="icofont-ui-clock"></i>
+                                        </div>
+                                        <span>Timing schedule</span>
+                                        <h4 class="mb-3">Working Hours</h4>
+                                        <ul class="w-hours list-unstyled">
+                                            <li class="d-flex justify-content-between">Sun - Wed : <span>8:00 - 17:00</span></li>
+                                            <li class="d-flex justify-content-between">Thu - Fri : <span>9:00 - 17:00</span></li>
+                                            <li class="d-flex justify-content-between">Sat - sun : <span>10:00 - 17:00</span></li>
+                                        </ul>
+                                    </div> -->
 
                         <div class="feature-item mb-2 mb-lg-0">
                             <span>Зарегистрируйтесь, чтобы вам доверяли, когда вы в опасности</span>

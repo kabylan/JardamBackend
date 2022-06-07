@@ -36,12 +36,18 @@ namespace Jardam
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-       options.UseSqlServer(
-           Configuration.GetConnectionString("DefaultConnection")));
+            options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            { 
+                options.SignIn.RequireConfirmedAccount = true;
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+            })
                 .AddDefaultUI()
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -98,7 +104,6 @@ namespace Jardam
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCors(builder => builder
                 .AllowAnyOrigin()
